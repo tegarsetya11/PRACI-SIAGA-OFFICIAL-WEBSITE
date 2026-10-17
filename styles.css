@@ -144,7 +144,8 @@ h1, h2, h3, p { margin-top: 0; }
 .download-copy .eyebrow { margin-bottom: 14px; color: #3379af; }
 .download-copy h2 { margin: 0 0 13px; color: var(--navy); font-family: var(--font-heading); font-size: clamp(26px,3vw,35px); font-weight: 800; letter-spacing: -1.3px; line-height: 1.25; }
 .download-copy > p:not(.eyebrow):not(.download-status) { max-width: 540px; margin: 0 0 19px; color: #61798e; font-size: 12px; line-height: 1.8; }
-.button-download { min-height: 44px; color: #fff; background: #7e9ab2; cursor: not-allowed; font-size: 11px; }
+.button-download { min-height: 44px; color: #fff; background: var(--navy); cursor: pointer; font-size: 11px; }
+.button-download:hover { background: var(--blue); transform: translateY(-2px); }
 .download-status { display: inline-flex; align-items: center; gap: 7px; margin: 13px 0 0 11px; color: #76899a; font-size: 10px; }
 .download-status span { color: #d9974e; font-size: 9px; }
 .download-brand { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 11px; margin-right: 28px; }
