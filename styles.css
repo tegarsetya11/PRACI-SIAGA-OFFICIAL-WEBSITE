@@ -137,6 +137,10 @@ h1, h2, h3, p { margin-top: 0; }
 .agency-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; margin: 0; padding: 0; list-style: none; }
 .agency-card { display: flex; min-height: 154px; flex-direction: column; align-items: center; justify-content: flex-start; gap: 13px; padding: 17px 12px 15px; border: 1px solid #e5edf4; border-radius: 10px; background: #fff; color: #36536f; text-align: center; font-size: 11px; font-weight: 600; line-height: 1.55; }
 .agency-logo { display: block; width: 66px; height: 66px; flex: 0 0 66px; object-fit: contain; }
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .agency-card { transform: perspective(800px) translateY(0) rotateX(var(--agency-tilt-y, 0deg)) rotateY(var(--agency-tilt-x, 0deg)); transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+  .agency-card:hover { transform: perspective(800px) translateY(-5px) rotateX(var(--agency-tilt-y, 0deg)) rotateY(var(--agency-tilt-x, 0deg)); border-color: #c5dff2; box-shadow: 0 16px 30px rgba(25,67,103,.16); }
+}
 
 .download-section { padding: 84px 0 75px; background: #fff; }
 .download-card { position: relative; display: flex; min-height: 300px; justify-content: space-between; align-items: center; padding: 45px 65px; overflow: hidden; border-radius: 14px; background: linear-gradient(110deg,#eaf5fe,#f3f9fe 65%,#e7f3fd); }

@@ -23,6 +23,30 @@ if (year) {
   year.textContent = String(new Date().getFullYear());
 }
 
+if (window.matchMedia("(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)").matches) {
+  document.querySelectorAll(".agency-card").forEach((card) => {
+    card.addEventListener("pointermove", (event) => {
+      if (event.pointerType !== "mouse") {
+        return;
+      }
+
+      const bounds = card.getBoundingClientRect();
+      const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+      const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+      card.style.setProperty("--agency-tilt-x", `${x * 8}deg`);
+      card.style.setProperty("--agency-tilt-y", `${y * -8}deg`);
+    });
+
+    const resetTilt = () => {
+      card.style.removeProperty("--agency-tilt-x");
+      card.style.removeProperty("--agency-tilt-y");
+    };
+
+    card.addEventListener("pointerleave", resetTilt);
+    card.addEventListener("pointercancel", resetTilt);
+  });
+}
+
 const photoTrigger = document.querySelector(".developer-photo-trigger");
 const photoDialog = document.querySelector(".developer-photo-dialog");
 const photoClose = document.querySelector(".developer-photo-close");
