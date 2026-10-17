@@ -168,9 +168,11 @@ h1, h2, h3, p { margin-top: 0; }
 .developer-page-main { background: #fff; }
 .developer-hero { padding: 65px 0; background: linear-gradient(112deg, #f6faff 0%, #eef7ff 53%, #e6f3ff 100%); }
 .developer-hero-layout { display: flex; align-items: center; gap: 32px; }
+.developer-hero-visuals { display: flex; flex: 0 0 auto; align-items: center; gap: 12px; }
 .developer-photo-trigger { width: 132px; height: 158px; flex: 0 0 132px; padding: 6px; overflow: hidden; border: 1px solid #d8e8f5; border-radius: 20px; background: rgba(255,255,255,.78); box-shadow: 0 14px 35px rgba(25,67,103,.15); cursor: zoom-in; }
 .developer-photo-trigger:focus-visible, .developer-photo-close:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
 .developer-photo { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 25%; border-radius: 14px; }
+.developer-logo { display: block; width: 132px; height: 158px; flex: 0 0 132px; padding: 6px; border: 1px solid #d8e8f5; border-radius: 20px; background: rgba(255,255,255,.78); box-shadow: 0 14px 35px rgba(25,67,103,.15); object-fit: contain; }
 .developer-photo-dialog { position: relative; max-width: min(90vw, 720px); max-height: 92vh; padding: 14px; overflow: visible; border: 1px solid rgba(255,255,255,.25); border-radius: 16px; background: #fff; box-shadow: 0 24px 80px rgba(0,0,0,.35); }
 .developer-photo-dialog[open] { display: grid; place-items: center; }
 .developer-photo-dialog::backdrop { background: rgba(5,19,34,.82); backdrop-filter: blur(4px); }
@@ -239,8 +241,10 @@ h1, h2, h3, p { margin-top: 0; }
   .download-header-back { min-height: 38px; padding: 0 10px; font-size: 9px; }
   .developer-hero { padding: 44px 0; }
   .developer-hero-layout { align-items: flex-start; flex-direction: column; gap: 19px; }
+  .developer-hero-visuals { gap: 10px; }
   .developer-photo-trigger { width: 104px; height: 126px; flex-basis: 104px; border-radius: 16px; }
   .developer-photo-trigger img { border-radius: 11px; }
+  .developer-logo { width: 104px; height: 126px; flex-basis: 104px; border-radius: 16px; }
   .developer-role { font-size: 12px; line-height: 1.6; }
   .developer-intro blockquote { margin-top: 13px; font-size: 12px; }
   .developer-content { padding-top: 44px; padding-bottom: 52px; }
