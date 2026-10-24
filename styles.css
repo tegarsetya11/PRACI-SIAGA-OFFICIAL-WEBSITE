@@ -185,6 +185,8 @@ h1, h2, h3, p { margin-top: 0; }
 .developer-intro .eyebrow { margin-bottom: 11px; }
 .developer-intro h1 { margin: 0; color: var(--navy); font-family: var(--font-heading); font-size: clamp(32px,4vw,46px); font-weight: 800; letter-spacing: -2px; line-height: 1.2; }
 .developer-role { margin: 10px 0 0; color: #4f6c85; font-size: 14px; font-weight: 600; }
+.developer-portfolio-link { width: fit-content; margin-top: 14px; }
+.developer-portfolio-link:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
 .developer-intro blockquote { margin: 19px 0 0; color: #58748d; font-size: 14px; font-style: italic; line-height: 1.7; }
 .developer-content { padding-top: 63px; padding-bottom: 72px; }
 .developer-section { margin-bottom: 48px; }
